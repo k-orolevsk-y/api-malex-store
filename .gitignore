@@ -1,0 +1,5 @@
+/.idea
+/Files
+/vendor
+composer.json
+composer.lock

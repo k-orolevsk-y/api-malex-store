@@ -1,0 +1,10 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule .* index.php [QSA,L]
+
+ErrorDocument 300 /index.php
+ErrorDocument 403 /index.php
+
+php_flag opcache.enable Off
