@@ -80,7 +80,7 @@
 
 
 			$spamDetect['needed_captcha_time'] = 0;
-			$spamDetect->last_captcha = time();
+			$spamDetect['last_captcha'] = time();
 			$spamDetect['used_methods'] = 0;
 			R::store($spamDetect);
 
