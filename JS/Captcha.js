@@ -14,8 +14,7 @@ window.onload = function () {
 
             if(url.searchParams.get('redirect_uri') == null) {
                 window.location.href = 'https://api.malex-store.ru/captcha?sid=' + url.searchParams.get('sid') + "&token=" + token;
-            }
-            else {
+            } else {
                 window.location.href = 'https://api.malex-store.ru/captcha?sid=' + url.searchParams.get('sid') + "&redirect_uri=" + url.searchParams.get('redirect_uri') + "&token=" + token;
             }
         });
