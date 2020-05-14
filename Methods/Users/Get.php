@@ -80,7 +80,7 @@
 
 				$access_token_user = Handler::getUserByAccessToken($request['access_token']);
 
-				if($user['id'] == $access_token_user['id'] || $access_token_user['admin'] > 1) {
+				if(($user['id'] == $access_token_user['id'] || $access_token_user['admin'] > 1) && $user != null) {
 					$cart = R::getAll('SELECT product_id,count FROM `carts` WHERE `user_id` = ?', [ $user['id'] ]);
 					$user['cart'] = [ 'count' => count($cart), 'items' => $cart ];
 
