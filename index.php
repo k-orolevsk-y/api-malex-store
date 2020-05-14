@@ -155,7 +155,7 @@
 			$response['status'] = 'success';
 			foreach($returns as $key => $value) $response['response'][$key] = $value;
 
-			exit(json_encode([$response]));
+			exit(json_encode($response));
 		}
 
 		/**
